@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "bootstrap-vue": "^2.0.0-rc.11",
+    "odometer": "^0.4.8",
     "vue": "^2.5.22",
+    "vue-odometer": "^1.0.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
