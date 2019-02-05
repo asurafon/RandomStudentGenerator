@@ -21,8 +21,6 @@
 <script>
 import IOdometer from 'vue-odometer';
 import 'odometer/themes/odometer-theme-default.css';
-
-import 'odometer/themes/odometer-theme-car.css';
 import mondayList from '@/assets/data/mondayList.json';
 import wednesdayList from '@/assets/data/wednesdayList.json';
 
