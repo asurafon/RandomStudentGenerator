@@ -8,7 +8,7 @@
             <p>
                 And the Oscar goes to...
             </p>        
-            <IOdometer class="iOdometer" :value="num" :theme="car"/>
+            <IOdometer class="iOdometer" :value="num" :theme="Car"/>
         </div>   
         <div v-if="showWinner" class="winner">
             <b-alert variant="success" show>
@@ -21,7 +21,6 @@
 <script>
 import IOdometer from 'vue-odometer';
 import 'odometer/themes/odometer-theme-default.css';
-import 'odometer/themes/odometer-theme-car.css';
 
 import 'odometer/themes/odometer-theme-car.css';
 import mondayList from '@/assets/data/mondayList.json';
@@ -53,9 +52,8 @@ export default {
                 if(member.coupleId == null)
                     studentsId.push(member.id);
             });
-            var randomNumber = Math.floor(Math.random() * studentsId.length);
-            var constant = 95;
             
+            var randomNumber = Math.floor(Math.random() * studentsId.length);            
             //console.log(randomNumber);
             this.num = randomNumber;
             
@@ -65,13 +63,9 @@ export default {
             });
 
             var self = this;
-            var time = constant*randomNumber;
-            
             setTimeout(function(){
                 self.showWinner = true;
-            },time);
-
-            
+            },1900);            
         },
         reset(){
             this.num = 0;
@@ -96,12 +90,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .iOdometer {
-        font-size: 60px;
+        font-size: 150px;
         margin: 0;
     }
 
     p{
-        font-size: 70px;
+        font-size: 30px;
     }
 
     button {
@@ -112,4 +106,5 @@ export default {
         font-size: 75px;
         margin-top: 60px;
     }
+
 </style>
